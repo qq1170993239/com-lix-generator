@@ -1,0 +1,14 @@
+spring:
+  freemarker:
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+    cache: false
+    template-loader-path: classpath:/views
+#  mvc:
+#    static-path-pattern: /static
+  resources:
+      static-locations: classpath:/static/,classpath:/views/
+server:
+    port: 8888
+

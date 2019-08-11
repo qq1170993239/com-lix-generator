@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.gacl.mapping.userMapper">
+
+    <select id="select">
+        SELECT
+        <include refid="base_field"/>
+        FROM
+        <include refid="base_table"/>
+        WHERE 1=1
+    </select>
+
+    <delete id="remove">
+        DELETE FROM
+        <include refid="base_table"/>
+        WHERE 1=1
+    </delete>
+
+    <update id="update">
+        UPDATE
+        <include refid="base_table"/>
+        SET
+    </update>
+
+    <insert id="insert">
+        INSERT INTO
+        <include refid="base_table"/>
+        VALUES
+    </insert>
+
+    <sql id="base_table">
+
+    </sql>
+    <sql id="base_field">
+
+    </sql>
+    <sql id="base_select_where">
+
+    </sql>
+    <sql id="base_update_where">
+
+    </sql>
+    <sql id="base_update_field">
+
+    </sql>
+
+</mapper>
