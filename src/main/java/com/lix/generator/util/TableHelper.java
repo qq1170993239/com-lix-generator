@@ -31,6 +31,7 @@ public class TableHelper {
     private List<ColumnClass> columns = new ArrayList<>();
 
     public TableHelper(String sql) throws JSQLParserException {
+        sql = sql.replace("`", "");
         //配置信息
         Configuration config = getConfig();
         CCJSqlParserManager parserManager = new CCJSqlParserManager();
@@ -39,7 +40,7 @@ public class TableHelper {
         parse.accept(myStatementVisitor);
         CreateTable createTable = myStatementVisitor.getCreateTable();
         // 获取主键
-        Optional<Index> primary_key = createTable.getIndexes().stream()
+        Optional<Index> primary_key = createTable.getIndexes() == null ? null : createTable.getIndexes().stream()
                 .filter(e -> e.getType() != null && e.getType().indexOf("KEY") != -1)
                 .findAny();
         List<String> columnsNames = null;
