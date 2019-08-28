@@ -50,18 +50,20 @@
     </insert>
 
     <sql id="base_table">
-    ${tableName}
+        ${tableName}
     </sql>
+
     <sql id="base_field">
     <#list columns as column>
-    ${column.columnName}        as      ${column.lowerCaseColumnName},
+        ${column.columnName}        as      ${column.lowerCaseColumnName},
     </#list>
     </sql>
 
     <sql id="base_where">
     <#list columns as column>
-        <if test="${column.lowerCaseColumnName} != null"> AND ${column.columnName}=<#noparse>
-            #{</#noparse>${column.lowerCaseColumnName}<#noparse>}</#noparse></if>
+        <if test="${column.lowerCaseColumnName} != null">
+            AND ${column.columnName}=<#noparse>#{</#noparse>${column.lowerCaseColumnName}<#noparse>}</#noparse>
+        </if>
     </#list>
     </sql>
 
@@ -73,16 +75,16 @@
 
     <sql id="base_insert_condition">
     <#list columns as column>
-        <if test="${column.lowerCaseColumnName} != null"><#noparse>#{</#noparse>${column.lowerCaseColumnName}<#noparse>
-            }</#noparse>,
+        <if test="${column.lowerCaseColumnName} != null">
+            <#noparse>#{</#noparse>${column.lowerCaseColumnName}<#noparse>}</#noparse>,
         </if>
     </#list>
     </sql>
 
     <sql id="base_update_condition">
     <#list columns as column>
-        <if test="${column.lowerCaseColumnName} != null">${column.columnName}=<#noparse>
-            #{</#noparse>${column.lowerCaseColumnName}<#noparse>}</#noparse>,
+        <if test="${column.lowerCaseColumnName} != null">
+            ${column.columnName}=<#noparse>#{</#noparse>${column.lowerCaseColumnName}<#noparse>}</#noparse>,
         </if>
     </#list>
     </sql>

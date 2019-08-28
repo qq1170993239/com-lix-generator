@@ -16,7 +16,7 @@
 </div>
 <div style="width: 60%;margin:0 auto;">
     <div>
-        <form class="form-horizontal" role="form" method="get" action="/code">
+        <form class="form-horizontal" role="form" method="post" action="/code">
             <div class="form-group">
                 <label for="author" class="col-sm-2 control-label">作者</label>
                 <div class="col-sm-10">

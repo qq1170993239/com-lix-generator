@@ -10,5 +10,5 @@ spring:
   resources:
       static-locations: classpath:/static/,classpath:/views/
 server:
-    port: 8888
+    port: 80
 
