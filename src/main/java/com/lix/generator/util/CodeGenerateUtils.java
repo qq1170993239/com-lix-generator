@@ -33,7 +33,7 @@ public class CodeGenerateUtils {
         templateNames.put("ServiceInterface.ftl", "Service.java");
         templateNames.put("ServiceImpl.ftl", "ServiceImpl.java");
         templateNames.put("Controller.ftl", "Controller.java");
-        templateNames.put("Model.ftl", "Entity.java");
+        templateNames.put("Model.ftl", ".java");
     }
 
     public static void generatorCode(JSONObject data, ZipOutputStream zip) throws Exception {

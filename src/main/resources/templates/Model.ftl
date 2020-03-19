@@ -1,11 +1,11 @@
 package ${packageName}.entity;
 
 /**
-* ${tableComment}实体
+* ${tableName}实体
 * @author ${author}
 * @Date  ${date}
 */
-public class ${className} implements IBaseEntity {
+public class ${className} {
 
 <#list columns as column>
 // ${column.columnComment}

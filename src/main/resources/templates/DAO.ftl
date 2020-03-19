@@ -1,10 +1,13 @@
-package ${packageName}.temp;
+package ${packageName}.Mapper;
+
+import ${packageName}.entity.${className};
+
 /**
-* ${tableComment}DAO
+* ${tableName}
 * @author ${author}
 * @Date  ${date}
 */
-public interface ${className}DAO<T extends IBaseEntity> extends BaseDAO<T>{
+public interface ${className}DAO extends BaseDAO<${className}>{
 
 
 }

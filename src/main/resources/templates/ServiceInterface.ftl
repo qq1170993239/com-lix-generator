@@ -1,10 +1,10 @@
 package ${packageName}.service;
 
 /**
-* ${tableComment}service
+* ${tableName}业务层
 * @author ${author}
 * @Date ${date}
 */
-public interface I${className}Service {
+public interface ${className}Service {
 
 }

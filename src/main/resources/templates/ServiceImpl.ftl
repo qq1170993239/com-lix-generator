@@ -4,6 +4,6 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class ${className}ServiceImpl implements I${className}Service {
+public class ${className}ServiceImpl implements ${className}Service {
 
 }

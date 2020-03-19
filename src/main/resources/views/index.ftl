@@ -47,4 +47,7 @@
     <p>Email ： sclx1220@163.com</p>
 </div>
 </body>
+<script>
+document.getElementById("sql").value="CREATE TABLE user (\n id  int(11) NOT NULL COMMENT '自增主键',\n name  varchar(16) NULL DEFAULT NULL COMMENT '姓名',\n sex  varchar(2) NULL DEFAULT NULL COMMENT '性别',\n age  int(3) NULL DEFAULT NULL COMMENT '年龄',\n address  varchar(255) NULL DEFAULT NULL COMMENT '住址',\n phone  varchar(32) NULL DEFAULT NULL COMMENT '联系方式',\n PRIMARY KEY ( id ) USING BTREE \n) ENGINE = InnoDB"
+</script>
 </html>
